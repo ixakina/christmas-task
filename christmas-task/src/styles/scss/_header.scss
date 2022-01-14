@@ -1,0 +1,111 @@
+.header {
+  &__wrapper {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+.nav {
+  &__logo {
+    cursor: pointer;
+    display: block;
+    height: 60px;
+    width: 48px;
+    background: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/svg/tree.svg")
+      center / contain no-repeat;
+    transition: all 0.3s;
+
+    &:hover {
+      filter: invert(57%) sepia(100%) saturate(329%) hue-rotate(141deg)
+        brightness(89%) contrast(90%);
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 60px;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    color: $white-color;
+    text-transform: uppercase;
+    font-family: "Neucha", cursive;
+    font-size: 2.2rem;
+    transition: all 0.3s;
+
+    &:hover {
+      color: #278d9f;
+    }
+  }
+}
+
+.info {
+  &__search {
+    border: 1px solid #24c5db;
+    border-radius: 30px;
+    height: 36px;
+    width: 300px;
+    padding: 0 15px;
+    background: rgba(31, 112, 127, 0.3)
+      url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/svg/search.svg")
+      260px 50% / 24px 24px no-repeat;
+
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: $white-color;
+
+    &:focus {
+      background: none;
+    }
+
+    &::-webkit-search-cancel-button {
+      cursor: pointer;
+      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(143deg)
+        brightness(200%) contrast(200%);
+    }
+
+    &::placeholder {
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      color: $white-color;
+    }
+  }
+  &__chosen {
+    width: 48px;
+    height: 60px;
+    transition: 0.3s;
+    background: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/svg/ball-2.svg")
+      0px -8px / 48px 60px no-repeat;
+
+    span {
+      display: inline-block;
+      min-width: 40px;
+      height: 40px;
+      margin-top: 10px;
+      margin-left: 4px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      font-size: 20px;
+      background-color: #278d9f;
+      color: $white-color;
+    }
+  }
+}

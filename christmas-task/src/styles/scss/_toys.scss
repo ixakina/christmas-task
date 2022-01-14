@@ -1,0 +1,363 @@
+.toys-page {
+  padding: 20px 0;
+
+  &__settings {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__toy-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+.settings {
+  &__part {
+    height: 320px;
+    padding: 20px;
+    background: radial-gradient(
+      118.88% 606.86% at 0% 0%,
+      rgba(36, 197, 219, 0.15) 0%,
+      rgba(36, 197, 219, 0) 100%
+    );
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+  }
+
+  &__value {
+    flex: 0 1 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+
+    button.active {
+      filter: invert(9%) sepia(63%) saturate(461%) hue-rotate(322deg)
+        brightness(83%) contrast(88%);
+    }
+  }
+
+  &__range {
+    flex: 0 1 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__sort {
+    flex: 0 1 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    button {
+      @include btn($size: 1.8rem, $height: 36px, $width: 70%);
+      flex: 0 0 36px;
+      background: rgba(31, 112, 127, 0.3);
+      border: 1px solid #24c5db;
+      text-align: left;
+      padding: 0 20px;
+      transition: all 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &__title {
+    color: $white-color;
+    text-transform: uppercase;
+    font-family: "Neucha", cursive;
+    font-size: 2.2rem;
+  }
+
+  &__shape {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__subtitle {
+    color: $white-color;
+    font-size: 1.8rem;
+  }
+
+  &__color {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__size {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__favorite {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+}
+.shape {
+  &__button {
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    transition: all 0.3s;
+
+    &:hover {
+      filter: invert(9%) sepia(63%) saturate(461%) hue-rotate(322deg)
+        brightness(83%) contrast(88%);
+    }
+
+    &:nth-of-type(1) {
+      background: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/svg/ball.svg")
+        center / contain no-repeat;
+    }
+
+    &:nth-of-type(2) {
+      background: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/svg/bell.svg")
+        center / contain no-repeat;
+    }
+
+    &:nth-of-type(3) {
+      background: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/svg/cone.svg")
+        center / contain no-repeat;
+    }
+
+    &:nth-of-type(4) {
+      background: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/svg/snowflake.svg")
+        center / contain no-repeat;
+    }
+
+    &:nth-of-type(5) {
+      background: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/svg/toy.svg")
+        center / contain no-repeat;
+    }
+  }
+}
+
+.size {
+  &__button {
+    height: 50px;
+    width: 50px;
+    background: transparent;
+    transition: all 0.3s;
+
+    &:hover {
+      filter: invert(9%) sepia(63%) saturate(461%) hue-rotate(322deg)
+        brightness(83%) contrast(88%);
+    }
+
+    &:nth-of-type(1) {
+      background: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/svg/ball.svg")
+        center / contain no-repeat;
+    }
+
+    &:nth-of-type(2) {
+      background: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/svg/ball.svg")
+        center / 80% no-repeat;
+    }
+
+    &:nth-of-type(3) {
+      background: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/svg/ball.svg")
+        center / 60% no-repeat;
+    }
+  }
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.color {
+  &__checkbox {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.checkbox {
+  &__input:checked + &__label::after {
+    transform: scale(1);
+  }
+
+  &__input {
+    cursor: pointer;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+      content: "";
+      flex: 0 0 30px;
+      height: 30px;
+      border-radius: 4px;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 25%;
+      left: 30%;
+      width: 14px;
+      height: 14px;
+      background: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/svg/checked.svg")
+        center no-repeat;
+      transform: scale(0);
+    }
+  }
+}
+
+label[for="white"]:before {
+  background: $white-color;
+}
+
+label[for="white"]:after {
+  filter: invert(49%) sepia(0%) saturate(21%) hue-rotate(239deg)
+    brightness(108%) contrast(64%);
+}
+
+label[for="yellow"]:before {
+  background: yellow;
+}
+
+label[for="yellow"]:after {
+  filter: invert(49%) sepia(0%) saturate(21%) hue-rotate(239deg)
+    brightness(108%) contrast(64%);
+}
+
+label[for="red"]:before {
+  background: red;
+}
+
+label[for="blue"]:before {
+  background: blue;
+}
+
+label[for="green"]:before {
+  background: green;
+}
+
+label[for="favorite"]:before {
+  background: #278d9f;
+}
+
+label[for="favorite"]:after {
+  left: 9px;
+}
+
+select,
+option {
+  background-color: #183e42;
+  color: $white-color;
+}
+
+select {
+  cursor: pointer;
+  @include btn($size: 1.8rem, $height: 36px, $width: 80%);
+  flex: 0 0 36px;
+  border: 1px solid #24c5db;
+  border-radius: 30px;
+  padding: 0 10px;
+  appearance: none;
+  background: rgba(31, 112, 127, 0.3)
+    url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/svg/arrow-down.svg")
+    calc(100% - 10px) 50%/ 24px 24px no-repeat;
+  margin-bottom: 90px;
+}
+
+.range {
+  &__part {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__number {
+  }
+
+  &__year {
+  }
+}
+
+.number__wrapper,
+.year__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.from,
+.to {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 66px;
+  @include btn($size: 1.8rem, $height: 36px, $width: 17%);
+  background: rgba(31, 112, 127, 0.3);
+  border: 1px solid #24c5db;
+  text-align: center;
+  color: $white-color;
+  border-radius: 20px;
+}
+
+.card {
+  cursor: pointer;
+  padding: 5px 0 5px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 1 18%;
+  min-width: 280px;
+  border: 1px solid #24c5db;
+  background: radial-gradient(
+    118.88% 606.86% at 0% 0%,
+    rgba(36, 197, 219, 0.15) 0%,
+    rgba(36, 197, 219, 0) 100%
+  );
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  color: $white-color;
+  font-size: 1.6rem;
+  line-height: 180%;
+  column-gap: 10px;
+
+  span {
+    display: block;
+  }
+
+  &__name {
+    flex: 0 1 100%;
+    font-family: "Neucha", cursive;
+    font-size: 2.2rem;
+  }
+
+  &__image {
+    width: 30%;
+    flex: 0 1 30%;
+    object-fit: contain;
+    object-position: 50% 20%;
+  }
+
+  &__info {
+    flex: 0 1 auto;
+  }
+}
+
+.card.chosen {
+  border: 1px solid rgb(203, 183, 122);
+  box-shadow: 0 0 5px 5px rgba(203, 183, 122, 40%);
+}

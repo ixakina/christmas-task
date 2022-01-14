@@ -1,0 +1,57 @@
+.first-page {
+  transition: all 0.5s;
+  height: calc(100% - 140px);
+
+  &__wrapper {
+    background: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/ball/first-page-big-ball.png")
+        15% -30% / auto 80% no-repeat,
+      url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/ball/first-page-small-ball.png")
+        75% 0 / auto 50% no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    min-height: 100%;
+  }
+
+  &__text {
+    width: 593px;
+    height: 249px;
+    border: 2px solid #24c5db;
+    background: radial-gradient(
+      118.88% 606.86% at 0% 0%,
+      rgba(36, 197, 219, 0.15) 0%,
+      rgba(36, 197, 219, 0) 100%
+    );
+    backdrop-filter: blur(31px);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      text-align: center;
+      color: $white-color;
+      text-transform: uppercase;
+      font-family: "Neucha", cursive;
+      font-size: 5.3rem;
+    }
+  }
+
+  &__button {
+    @include btn($height: 54px, $width: 320px);
+    background: radial-gradient(
+      118.88% 606.86% at 0% 0%,
+      rgba(36, 197, 219, 0.15) 0%,
+      rgba(36, 197, 219, 0) 100%
+    );
+    backdrop-filter: blur(31px);
+    border: 2px solid #24c5db;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

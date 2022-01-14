@@ -1,0 +1,31 @@
+.footer {
+  &__wrapper {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__rs-link {
+    display: block;
+    width: 160px;
+    height: 60px;
+    background: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/svg/rss.svg")
+      center / cover no-repeat;
+    transition: all 0.3s;
+    &:hover {
+      filter: invert(57%) sepia(100%) saturate(329%) hue-rotate(141deg)
+        brightness(89%) contrast(90%);
+    }
+  }
+
+  &__git-link {
+    color: $white-color;
+    font-size: 2rem;
+    transition: all 0.3s;
+
+    &:hover {
+      color: #278d9f;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Neucha&display=swap");
+@import "./constants";
+@import "./mixin";
+@import "./header";
+@import "./footer";
+@import "./first-page";
+@import "./toys";
+@import "./slider";
+@import "./modal";
+@import "./tree";
+@import "./snow";
+@import "./lights";
+
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: $green-color;
+}
+
+.wrapper {
+  max-width: 1480px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.section {
+  min-height: calc(100vh - 140px);
+  background: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/bg.jpg")
+    center / cover no-repeat;
+  background-attachment: fixed;
+}
+
+.button {
+  color: $white-color;
+  border-radius: 30px;
+}
+
+.hide {
+  display: none;
+}

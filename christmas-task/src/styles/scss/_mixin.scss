@@ -1,0 +1,10 @@
+@mixin btn($size: 2.2rem, $height, $width) {
+  font-size: $size;
+  height: $height;
+  width: $width;
+}
+
+@mixin card($width) {
+  height: $width;
+  width: $width;
+}

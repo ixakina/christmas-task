@@ -1,0 +1,31 @@
+.slider {
+  width: 55%;
+  height: 10px !important;
+  border: none !important;
+}
+
+.slider .noUi-connect {
+  background: #278d9f;
+}
+
+.slider .noUi-handle {
+  height: 18px !important;
+  width: 18px !important;
+  top: -5px !important;
+  right: -9px !important;
+  border-radius: 9px !important;
+  cursor: pointer !important;
+
+  &::after {
+    content: none;
+  }
+
+  &::before {
+    content: none;
+  }
+}
+
+.slider .noUi-target {
+  background: #fafafa;
+  border-radius: 3px;
+}

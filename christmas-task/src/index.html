@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christmas-task</title>
+  <link rel="icon" href="https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/favicon.ico" />
+</head>
+<body>
+<header class="header">
+ <div class="wrapper header__wrapper">
+  <nav class="header__nav">
+    <a class="nav__logo"></a>
+     <ul class="nav__list">
+       <li class="nav__item"><a href="#" class="nav__link toys-page-link">игрушки</a></li>
+       <li class="nav__item"><a href="#" class="nav__link tree-page-link">ёлка</a></li>
+     </ul>
+   </nav>
+   <div class="header__info">
+     <input type="search" class="info__search" autocomplete="off" placeholder="Поиск" autofocus>
+     <div class="info__chosen"><span>0</span></div>
+   </div>
+ </div>
+</header>
+<div class="first-page section">
+  <div class="wrapper first-page__wrapper">
+    <div class="first-page__text">
+      <p>помогите бабушке нарядить елку</p>
+    </div>
+    <button class="button first-page__button">Начать</button>
+  </div>
+</div>
+<div class="toys-page section hide">
+  <div class="wrapper toys-page__wrapper">
+    <div class="toys-page__settings">
+      <div class="settings__value settings__part">
+        <h2 class="settings__title">Фильтры по значению</h2>
+        <div class="settings__shape">
+          <span class="settings__subtitle">Форма:</span>
+          <button class="shape__button" data-filter="шар"></button>
+          <button class="shape__button" data-filter="колокол"></button>
+          <button class="shape__button" data-filter="шишка"></button>
+          <button class="shape__button" data-filter="снежинка"></button>
+          <button class="shape__button" data-filter="фигурка"></button>
+        </div>
+        <div class="settings__color">
+          <span class="settings__subtitle">Цвет:</span>
+          <div class="color__checkbox">
+            <input type="checkbox" class="checkbox__input" data-filter="белый" id="white">
+            <label for="white" class="checkbox__label"></label>
+          </div>
+          <div class="color__checkbox">
+            <input type="checkbox" class="checkbox__input" data-filter="желтый" id="yellow">
+            <label for="yellow" class="checkbox__label"></label>
+          </div>
+          <div class="color__checkbox">
+            <input type="checkbox" class="checkbox__input" data-filter="красный" id="red">
+            <label for="red" class="checkbox__label"></label>
+          </div>
+          <div class="color__checkbox">
+            <input type="checkbox" class="checkbox__input" data-filter="синий" id="blue">
+            <label for="blue" class="checkbox__label"></label>
+          </div>
+          <div class="color__checkbox">
+            <input type="checkbox" class="checkbox__input" data-filter="зелёный" id="green">
+            <label for="green" class="checkbox__label"></label>
+          </div>
+        </div>
+        <div class="settings__size">
+          <span class="settings__subtitle">Размер:</span>
+          <button class="size__button" data-filter="большой"></button>
+          <button class="size__button" data-filter="средний"></button>
+          <button class="size__button" data-filter="малый"></button>
+        </div>
+        <div class="settings__favorite">
+          <span class="settings__subtitle">Только любимые:</span>
+          <div class="favorite__checkbox">
+            <input type="checkbox" class="checkbox__input" id="favorite">
+            <label for="favorite" class="checkbox__label"></label>
+          </div>
+        </div>
+      </div>
+      <div class="settings__range settings__part">
+        <h2 class="settings__title">Фильтры по диапазону</h2>
+        <div class="range__number range__part">
+          <span class="settings__subtitle">Количество экземпляров:</span>
+          <div class="number__wrapper">
+            <span class="from">1</span>
+            <div class="slider"></div>
+            <span class="to">12</span>
+          </div>
+        </div>
+        <div class="range__year range__part">
+          <span class="settings__subtitle">Год приобретения:</span>
+          <div class="year__wrapper">
+            <span class="from">1940</span>
+            <div class="slider"></div>
+            <span class="to">2020</span>
+          </div>
+        </div>
+      </div>
+      <div class="settings__sort settings__part">
+        <h2 class="settings__title">Сортировка</h2>
+        <select name="select-sort" id="select">
+          <option value="nameUp">По названию от «А» до «Я»</option>
+          <option value="nameDown">По названию от «Я» до «А»</option>
+          <option value="yearUp">По году по возрастанию</option>
+          <option value="yearDown">По году по убыванию</option>
+        </select>
+        <button class="button reset-filters">Сбросить фильтры</button>
+        <button class="button reset-settings">Сбросить настройки</button>
+      </div>
+    </div>
+    <div class="toys-page__toy-cards">
+    </div>
+  </div>
+</div>
+<div class="tree-page section hide">
+  <div class="wrapper tree-page__wrapper">
+    <div class="tree-page__settings">
+      <div class="settings__buttons">
+        <button class="settings__button settings__button_volume"></button>
+        <button class="settings__button settings__button_snow"></button>
+      </div>
+      <div class="settings__trees">
+        <span class="settings__title">Выберите елку</span>
+        <div class="trees__container menu">
+          <div class="tree menu-item" data-tree="3"></div>
+          <div class="tree menu-item" data-tree="4"></div>
+          <div class="tree menu-item" data-tree="5"></div>
+          <div class="tree menu-item" data-tree="6"></div>
+        </div>
+      </div>
+      <div class="settings__bg">
+        <span class="settings__title">Выберите фон</span>
+        <div class="bg__container menu">
+          <div class="bg menu-item" data-bg="1"></div>
+          <div class="bg menu-item" data-bg="2"></div>
+          <div class="bg menu-item" data-bg="3"></div>
+          <div class="bg menu-item" data-bg="4"></div>
+          <div class="bg menu-item" data-bg="5"></div>
+          <div class="bg menu-item" data-bg="6"></div>
+          <div class="bg menu-item" data-bg="7"></div>
+          <div class="bg menu-item" data-bg="8"></div>
+        </div>
+      </div>
+      <div class="settings__lights">
+        <span class="settings__title">Гирлянда</span>
+        <div class="lights__container">
+          <button class="lights__color-button color" data-color="color"></button>
+          <button class="lights__color-button red" data-color="red"></button>
+          <button class="lights__color-button blue"  data-color="blue"></button>
+          <button class="lights__color-button yellow"  data-color="yellow"></button>
+          <button class="lights__color-button green"  data-color="green"></button>
+          <div class="lights__switch-button">
+            <div class="lights__swither"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tree-page__main-tree">
+      <div class="snow"></div>
+      <div class="lights">
+      </div>
+      <map name="image-map">
+          <area coords="247,0,-1,621,64,705,365,708,440,696,495,625" shape="poly">
+      </map>
+      <img src="https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/tree/5.png" usemap="#image-map" alt="tree">
+    </div>
+    <div class="tree-page__toys">
+      <span class="settings__title">Игрушки</span>
+      <div class="toys__container menu"></div>
+      <button class="button tree-page__reset-settings">Сбросить настройки</button>
+    </div>
+  </div>
+
+</div>
+<footer class="footer">
+  <div class="wrapper footer__wrapper">
+    <a href="https://github.com/ixakina" class="footer__git-link">Maria Khaikina, 2021</a>
+    <a href="https://rs.school/js/" class="footer__rs-link"></a>
+  </div>
+</footer>
+</body>
+</html>

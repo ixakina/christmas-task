@@ -1,0 +1,290 @@
+.tree-page {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    span.settings__title {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__settings {
+    flex: 0 1 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0;
+    justify-content: space-between;
+  }
+
+  &__main-tree {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 0 1 47%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/bg/1.jpg");
+    height: calc(100vh - 140px);
+    padding-bottom: 10px;
+    overflow: hidden;
+  }
+
+  &__toys {
+    flex: 0 1 25%;
+    padding: 20px 0;
+  }
+
+  &__reset-settings {
+    font-size: 2rem;
+    height: 50px;
+    min-width: 250px;
+    flex: 0 0 36px;
+    background: radial-gradient(118.88% 606.86% at 0% 0%, rgba(36, 197, 219, 0.15) 0%, rgba(36, 197, 219, 0) 100%);
+    backdrop-filter: blur(31px);
+    border: 2px solid #24c5db;
+    transition: all 0.3s;
+    text-align: left;
+    padding: 0 20px;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.settings {
+  &__buttons {
+    button {
+      width: 36px;
+      height: 36px;
+      transition: all 0.3s;
+      background-color: transparent;
+      &:hover {
+        filter: invert(9%) sepia(63%) saturate(461%) hue-rotate(322deg)
+          brightness(83%) contrast(88%);
+      }
+    }
+  }
+
+  &__button {
+    &_volume {
+      background: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/svg/audio.svg")
+        center / cover no-repeat;
+      margin-right: 100px;
+    }
+
+    &_snow {
+      background: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/svg/snow.svg")
+        center / cover no-repeat;
+    }
+  }
+
+  &__button.active {
+    filter: invert(9%) sepia(63%) saturate(461%) hue-rotate(322deg)
+      brightness(83%) contrast(88%);
+  }
+}
+
+.trees {
+  &__container {
+    gap: 15px;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu-item {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.tree {
+  @include card($width: 150px);
+  background-size: 60% auto;
+}
+
+.tree:nth-child(1) {
+  background-image: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/tree/3.png");
+}
+
+.tree:nth-child(2) {
+  background-image: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/tree/4.png");
+}
+
+.tree:nth-child(3) {
+  background-image: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/tree/5.png");
+}
+
+.tree:nth-child(4) {
+  background-image: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/tree/6.png");
+}
+
+.bg {
+  &__container {
+    gap: 10px;
+  }
+}
+
+.bg {
+  @include card($width: 80px);
+  background-size: cover;
+}
+
+.bg:nth-child(1) {
+  background-image: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/bg/1.jpg");
+}
+
+.bg:nth-child(2) {
+  background-image: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/bg/2.jpg");
+}
+
+.bg:nth-child(3) {
+  background-image: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/bg/3.jpg");
+}
+
+.bg:nth-child(4) {
+  background-image: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/bg/4.jpg");
+}
+
+.bg:nth-child(5) {
+  background-image: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/bg/5.jpg");
+}
+
+.bg:nth-child(6) {
+  background-image: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/bg/6.jpg");
+}
+
+.bg:nth-child(7) {
+  background-image: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/bg/7.jpg");
+}
+
+.bg:nth-child(8) {
+  background-image: url("https://raw.githubusercontent.com/ixakina/christmas-task-assets/master/assets/bg/8.jpg");
+}
+
+.lights {
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__color-button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: rgb(0 0 0 / 20%) 0 -1px 7px 1px, inset #441313 0 -1px 9px,
+      #ccc 0 2px 12px;
+    transition: all 0.3s;
+
+    &:hover {
+      box-shadow: rgb(0 0 0 / 20%) 0 -1px 7px 1px, inset #441313 0 -1px 9px,
+        #ccc 0 2px 50px;
+    }
+  }
+
+
+  &__switch-button {
+    cursor: pointer;
+    width: 60px;
+    height: 30px;
+    background-color: grey;
+    border-radius: 20px;
+    padding: 5px;
+    transition: all 0.3s;
+  }
+
+  &__switch-button.on {
+    background-color: #278d9f;
+  }
+
+  &__swither {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    transition: all 0.3s;
+    transform: translateX(0%);
+  }
+
+  &__swither.on {
+    transform: translateX(150%);
+  }
+}
+
+
+.color {
+  background: linear-gradient(
+    124deg,
+    #ff2400,
+    #e81d1d,
+    #e8b71d,
+    #e3e81d,
+    #1de840,
+    #1ddde8,
+    #2b1de8
+  );
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.toys {
+  &__container {
+    gap: 10px;
+    margin-bottom: 50px;
+  }
+}
+.tree-toy {
+  @include card($width: 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__count {
+    color: white;
+    background-color: #278d9f;
+    height: 22px;
+    width: 20px;
+    border-radius: 10px;
+    align-self: flex-end;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-left: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+   touch-action: none;
+   cursor: pointer;
+  }
+}
+
+
+
